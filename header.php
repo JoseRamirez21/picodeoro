@@ -123,7 +123,7 @@
           <li class="nav-item"><a class="nav-link" href="referencias.php">Referencias</a></li>
           <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
           <li class="nav-item ms-lg-3">
-            <a href="login.php" class="btn btn-login">Iniciar Sesión</a>
+        
           </li>
         </ul>
       </div>
