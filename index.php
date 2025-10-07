@@ -34,40 +34,98 @@
 </div>
 
 <!-- BIENVENIDA -->
+<!-- SECCIÓN BIENVENIDA -->
 <section class="container text-center py-5 fade-in">
-  <h2 class="fw-bold text-primary mb-3">Bienvenido a <span class="text-warning">Pico de Oro</span></h2>
-  <p class="lead text-secondary">Ofrecemos productos de alta calidad para el bienestar, crecimiento y desarrollo de tus gallos y gallinas.</p>
+  <h2 class="fw-bold text-primary mb-3">
+    Bienvenido a <span class="text-warning">Pico de Oro</span>
+  </h2>
+  <p class="lead text-secondary mb-5">
+    Ofrecemos productos de alta calidad para el bienestar, crecimiento y desarrollo de tus gallos y gallinas.
+  </p>
 
-  <div class="row mt-5">
-    <div class="col-md-4 mb-4 fade-in">
-      <div class="card feature-card shadow border-0 hover-lift">
+  <div class="row g-4">
+    <div class="col-md-4 fade-in">
+      <div class="card border-0 shadow-lg hover-lift rounded-4 overflow-hidden">
+        <img src="assets/img/balanceado.jpg" class="card-img-top" alt="Balanceados Pico de Oro">
         <div class="card-body">
-          <i class="fa-solid fa-seedling fa-3x text-primary mb-3"></i>
-          <h5 class="fw-bold">Balanceados</h5>
-          <p>Alimentos nutritivos para el mejor rendimiento y energía.</p>
+          <h5 class="fw-bold text-primary mt-3">Balanceados</h5>
+          <p class="text-muted">Alimentos nutritivos para el mejor rendimiento y energía.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-4 mb-4 fade-in">
-      <div class="card feature-card shadow border-0 hover-lift">
+
+    <div class="col-md-4 fade-in">
+      <div class="card border-0 shadow-lg hover-lift rounded-4 overflow-hidden">
+        <img src="assets/img/medicamentos.jpg" class="card-img-top" alt="Medicamentos Pico de Oro">
         <div class="card-body">
-          <i class="fa-solid fa-prescription-bottle-medical fa-3x text-primary mb-3"></i>
-          <h5 class="fw-bold">Medicamentos</h5>
-          <p>Tratamientos y productos veterinarios de confianza.</p>
+          <h5 class="fw-bold text-primary mt-3">Medicamentos</h5>
+          <p class="text-muted">Tratamientos y productos veterinarios de confianza.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-4 mb-4 fade-in">
-      <div class="card feature-card shadow border-0 hover-lift">
+
+    <div class="col-md-4 fade-in">
+      <div class="card border-0 shadow-lg hover-lift rounded-4 overflow-hidden">
+        <img src="assets/img/suplementos.jpg" class="card-img-top" alt="Suplementos Pico de Oro">
         <div class="card-body">
-          <i class="fa-solid fa-drumstick-bite fa-3x text-primary mb-3"></i>
-          <h5 class="fw-bold">Suplementos</h5>
-          <p>Fortalece su sistema inmune y mejora su desarrollo físico.</p>
+          <h5 class="fw-bold text-primary mt-3">Suplementos</h5>
+          <p class="text-muted">Fortalece su sistema inmune y mejora su desarrollo físico.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ESTILOS ADICIONALES -->
+<style>
+  .hover-lift {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .card img {
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover img {
+    transform: scale(1.08);
+  }
+
+  /* Animación de entrada suave */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<!-- ANIMACIÓN AL HACER SCROLL -->
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('appear');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
 
 <!-- NOSOTROS -->
 <section class="about-section py-5 text-light fade-in">
@@ -105,33 +163,88 @@
     <?php endforeach; ?>
   </div>
 </section>
-
-<!-- TESTIMONIOS -->
-<section class="testimonios py-5 bg-light fade-in">
+<!-- SECCIÓN DE TESTIMONIOS -->
+<section class="testimonios py-5 bg-gradient-to-r from-primary to-info text-light fade-in">
   <div class="container text-center">
-    <h2 class="fw-bold text-primary mb-4">Testimonios</h2>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 border-0 shadow-sm testimonial-card hover-lift">
-          <p>"Desde que uso sus balanceados, mis aves están más fuertes y saludables. ¡100% recomendado!"</p>
-          <h6 class="fw-bold text-primary mt-3">Juan Pérez</h6>
+    <h2 class="fw-bold text-warning mb-4">Lo que dicen nuestros clientes</h2>
+    <p class="mb-5 text-light-50">La confianza se gana con resultados. Esto es lo que opinan quienes confían en <strong>Pico de Oro</strong>.</p>
+
+    <div class="row g-4">
+      <!-- Testimonio 1 -->
+      <div class="col-md-4 col-lg-4">
+        <div class="card testimonial-card shadow-lg border-0 bg-dark text-light hover-lift">
+          <div class="card-body">
+            <img src="./assets/img/testimonio1.jpg" alt="Cliente 1" class="rounded-circle mb-3 testimonial-img">
+            <p>"Desde que uso sus balanceados, mis aves están más fuertes y saludables."</p>
+            <h6 class="fw-bold text-warning mt-3">Juan Pérez</h6>
+            <small class="text-light-50">Criador Profesional</small>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 border-0 shadow-sm testimonial-card hover-lift">
-          <p>"Excelente atención y productos de calidad. Mi criadero confía en Pico de Oro."</p>
-          <h6 class="fw-bold text-primary mt-3">Luis Ramos</h6>
+
+      <!-- Testimonio 2 -->
+      <div class="col-md-4 col-lg-4">
+        <div class="card testimonial-card shadow-lg border-0 bg-dark text-light hover-lift">
+          <div class="card-body">
+            <img src="./assets/img/testimonio2.jpg" alt="Cliente 2" class="rounded-circle mb-3 testimonial-img">
+            <p>"Excelente atención y productos de primera calidad. Mi criadero confía en Pico de Oro."</p>
+            <h6 class="fw-bold text-warning mt-3">Luis Ramos</h6>
+            <small class="text-light-50">Dueño de Criadero San Luis</small>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card p-3 border-0 shadow-sm testimonial-card hover-lift">
-          <p>"Los suplementos son increíbles, mis gallinas están más activas y con mejor plumaje."</p>
-          <h6 class="fw-bold text-primary mt-3">María Torres</h6>
+
+      <!-- Testimonio 3 -->
+      <div class="col-md-4 col-lg-4">
+        <div class="card testimonial-card shadow-lg border-0 bg-dark text-light hover-lift">
+          <div class="card-body">
+            <img src="./assets/img/testimonio3.jpg" alt="Cliente 3" class="rounded-circle mb-3 testimonial-img">
+            <p>"Los suplementos son increíbles, mis gallinas están más activas y con mejor plumaje."</p>
+            <h6 class="fw-bold text-warning mt-3">María Torres</h6>
+            <small class="text-light-50">Avicultora</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio 4 -->
+      <div class="col-md-4 col-lg-4">
+        <div class="card testimonial-card shadow-lg border-0 bg-dark text-light hover-lift">
+          <div class="card-body">
+            <img src="./assets/img/testimonio4.jpg" alt="Cliente 4" class="rounded-circle mb-3 testimonial-img">
+            <p>"El servicio al cliente es excelente. Siempre dispuestos a ayudar y resolver dudas."</p>
+            <h6 class="fw-bold text-warning mt-3">Carla Gómez</h6>
+            <small class="text-light-50">Emprendedora</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio 5 -->
+      <div class="col-md-4 col-lg-4">
+        <div class="card testimonial-card shadow-lg border-0 bg-dark text-light hover-lift">
+          <div class="card-body">
+            <img src="./assets/img/testimonio5.jpg" alt="Cliente 5" class="rounded-circle mb-3 testimonial-img">
+            <p>"He probado muchos productos, pero Pico de Oro destaca por su calidad y resultados."</p>
+            <h6 class="fw-bold text-warning mt-3">Pedro Alarcón</h6>
+            <small class="text-light-50">Criador Nacional</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio 6 -->
+      <div class="col-md-4 col-lg-4">
+        <div class="card testimonial-card shadow-lg border-0 bg-dark text-light hover-lift">
+          <div class="card-body">
+            <img src="./assets/img/testimonio6.jpg" alt="Cliente 6" class="rounded-circle mb-3 testimonial-img">
+            <p>"Gracias a sus productos, mis aves tienen un rendimiento impresionante."</p>
+            <h6 class="fw-bold text-warning mt-3">Lucía Fernández</h6>
+            <small class="text-light-50">Criadora Independiente</small>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- LLAMADO A LA ACCIÓN -->
 <section class="cta text-center text-light py-5 fade-in">
