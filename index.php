@@ -46,7 +46,7 @@
   <div class="row g-4">
     <div class="col-md-4 fade-in">
       <div class="card border-0 shadow-lg hover-lift rounded-4 overflow-hidden">
-        <img src="assets/img/balanceado.jpg" class="card-img-top" alt="Balanceados Pico de Oro">
+        <img src="assets/img/balanceado1.jpg" class="card-img-top" alt="Balanceados Pico de Oro">
         <div class="card-body">
           <h5 class="fw-bold text-primary mt-3">Balanceados</h5>
           <p class="text-muted">Alimentos nutritivos para el mejor rendimiento y energía.</p>
