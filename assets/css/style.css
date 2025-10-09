@@ -9,7 +9,7 @@
 
 /* ==== CARRUSEL ==== */
 .carousel-item img {
-  height: 85vh;
+  height: 10vh;
   object-fit: cover;
   filter: brightness(70%);
 }
@@ -81,4 +81,31 @@ body {
 .btn-primary:hover {
   background: linear-gradient(90deg, #1565c0, #64b5f6);
   transform: scale(1.05);
+}
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.15);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #1b5e20, #43a047);
+}
+
+.btn-outline-success:hover {
+  background-color: #43a047;
+  color: #fff;
+  border-color: #43a047;
+}
+
+input[type="number"] {
+  border-radius: 12px;
 }

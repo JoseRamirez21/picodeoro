@@ -123,6 +123,7 @@
           <li class="nav-item"><a class="nav-link" href="productos.php">Productos</a></li>
           <li class="nav-item"><a class="nav-link" href="referencias.php">Referencias</a></li>
           <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
+           <li class="nav-item"><a class="nav-link" href="carrito.php">Carrito</a></li>
           <li class="nav-item ms-lg-3">
         
           </li>

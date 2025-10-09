@@ -1,30 +1,36 @@
 <?php include 'header.php'; ?>
-
 <!-- HERO / CARRUSEL -->
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel" style="max-height: 700px; overflow: hidden;">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/img/banner1.jpg" class="d-block w-100 hero-img" alt="Productos balanceados">
+      <img src="assets/img/banner1.jpg" class="d-block w-100 hero-img" alt="Productos balanceados"
+           style="object-fit: cover; height: 700px;">
       <div class="carousel-caption d-none d-md-block animate__animated animate__fadeInUp">
-        <h2 class="fw-bold text-light display-5">Productos de Calidad para tus Aves</h2>
+        <h2 class="fw-bold text-light display-6">Productos de Calidad para tus Aves</h2>
         <p class="fs-5">Balanceados, medicamentos y suplementos de confianza.</p>
       </div>
     </div>
+
     <div class="carousel-item">
-      <img src="assets/img/banner2.jpg" class="d-block w-100 hero-img" alt="Gallos sanos">
+      <img src="assets/img/banner2.jpg" class="d-block w-100 hero-img" alt="Gallos sanos"
+           style="object-fit: cover; height: 700px;">
       <div class="carousel-caption d-none d-md-block animate__animated animate__fadeInUp">
-        <h2 class="fw-bold text-light display-5">Salud y Rendimiento Garantizado</h2>
+        <h2 class="fw-bold text-light display-6">Salud y Rendimiento Garantizado</h2>
         <p class="fs-5">Cuida tus aves con productos de primera calidad.</p>
       </div>
     </div>
+
     <div class="carousel-item">
-      <img src="assets/img/banner3.jpg" class="d-block w-100 hero-img" alt="Gallinas felices">
+      <img src="assets/img/banner3.jpg" class="d-block w-100 hero-img" alt="Gallinas felices"
+           style="object-fit: cover; height: 700px;">
       <div class="carousel-caption d-none d-md-block animate__animated animate__fadeInUp">
-        <h2 class="fw-bold text-light display-5">Confianza y Compromiso</h2>
+        <h2 class="fw-bold text-light display-6">Confianza y Compromiso</h2>
         <p class="fs-5">Tu aliado en el cuidado de tus aves.</p>
       </div>
     </div>
   </div>
+
+  <!-- CONTROLES -->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
@@ -32,6 +38,7 @@
     <span class="carousel-control-next-icon"></span>
   </button>
 </div>
+
 
 <!-- BIENVENIDA -->
 <!-- SECCIÓN BIENVENIDA -->
