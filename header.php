@@ -106,9 +106,10 @@
   <nav class="navbar navbar-expand-lg fixed-top fade-in">
     <div class="container">
       <!-- Logo -->
-      <a class="navbar-brand" href="index.php">
-        <img src="./assets/img/logo.png" alt="Logo Pico de Oro">
-      </a>
+     <a class="navbar-brand" href="index.php">
+  <img src="./assets/img/logo.png" alt="Logo Pico de Oro" style="height: 130px; width: 180px;">
+</a>
+
 
       <!-- Botón responsive -->
       <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
