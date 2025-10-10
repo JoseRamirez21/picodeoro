@@ -261,6 +261,7 @@
     <a href="productos.php" class="btn btn-warning px-4 py-2 fw-bold btn-animate">Ver Productos</a>
   </div>
 </section>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScgn1EYwejb7MmJJGA00gc0fU1p3Ey4NhmJlLgDcbeYzdw4tQ/viewform" class="btn btn-success">Ir al formulario</a>
 
 <?php include 'footer.php'; ?>
 
